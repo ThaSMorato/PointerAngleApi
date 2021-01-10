@@ -1,9 +1,9 @@
 require('dotenv/config');
 
-const {DATA_BASE, USER, PASSWORD } = process.env;
+const {DATA_BASE, USER, PASSWORD, DATABASE_PORT } = process.env;
 
 module.exports = {
-  url: `postgresql://${USER}:${PASSWORD}@localhost/${DATA_BASE}`,
+  url: `postgresql://${USER}:${PASSWORD}@localhost:${DATABASE_PORT}/${DATA_BASE}`,
   dialect: 'postgres',
   dialectOptions: {
     ssl: false,

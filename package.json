@@ -5,7 +5,8 @@
   "license": "MIT",
   "scripts": {
     "test": "jest",
-    "start": "node src/server.js"
+    "start": "node src/server.js",
+    "migration" : "sequelize db:migrate"
   },
   "dependencies": {
     "cors": "^2.8.5",
